@@ -1,0 +1,112 @@
+html,body,.page{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(23, 58, 156);
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.5,0.2,0.2,1.1);
+}
+a{
+    text-decoration: none;
+}
+li,ul,ol{
+    list-style: none;
+    /* display: inline; */
+}
+section{
+    display: inline;
+}
+.font-1{
+    font-size: 1rem;
+}
+.font-2{
+    font-size: 2rem;
+}
+.font-3{
+    font-size: 3rem;
+}
+.font-4{
+    font-size: 4rem;
+}
+#t2:target ul .icon,
+#t3:target ul .icon,
+#t4:target ul .icon{
+    transform: scale(0.6);
+    transition-delay: 0.25s;
+}
+#t2:target .page1 .icon,
+#t3:target .page1 .icon,
+#t4:target .page1 .icon{
+    filter: blur(2px);
+}
+#t2:target .page2,
+#t3:target .page3,
+#t4:target .page4{
+    left: 10%;
+}
+.page .icon{
+    transform: translateX(360%);
+    transition: all 0.5s ease-out;
+}
+.page1 .icon{
+    height: 420px;
+    transform: translateX(-50%)!important;
+}
+nav section{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size:5rem;
+    color: #fff;
+    text-align: center;
+    /* margin: auto 0; */
+    width: 100%;
+}
+nav section span{
+    font-size:2rem;
+}
+ul li{
+    margin: 25px;
+    transition: all .3s ease-in!important;
+}
+ul li a{
+    color: #fff;
+
+}
+ul li:hover{
+    opacity: 0.5;
+}
+nav.page1{
+    height: 100vh;
+    
+}
+.page2{
+    /* width: 90%; */
+    /* backface-visibility: hidden; */
+    background: hidden;
+    position: absolute;
+    background-color: blueviolet;
+}
+.page2,.page3,.page4{
+    position: absolute;
+    left: 200%;
+}
+/* .icon{
+
+} */
+ul.menu{
+    align-self: center;
+    /* height: 50vh; */
+    /* background-color: aqua; */
+    font-size: 1.5rem;
+}
+.menu{   
+    padding: 15px;
+}
+#t4{
+    display: flex;
+}
