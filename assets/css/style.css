@@ -1,112 +1,152 @@
-html,body,.page{
-    height: 100%;
-    width: 100%;
+*{
     padding: 0;
     margin: 0;
-    overflow: hidden;
-    background-color: rgb(23, 58, 156);
     box-sizing: border-box;
-    position: relative;
-    transition: all 0.6s cubic-bezier(0.5,0.2,0.2,1.1);
-}
-a{
+    list-style: none;
     text-decoration: none;
 }
-li,ul,ol{
-    list-style: none;
-    /* display: inline; */
+a{
+    color: #fff;
 }
-section{
-    display: inline;
+body,html{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
-.font-1{
-    font-size: 1rem;
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(30, 30, 255);
+
 }
-.font-2{
+label{
+    margin: 20px 0px 0 30px;
     font-size: 2rem;
 }
-.font-3{
-    font-size: 3rem;
-}
-.font-4{
-    font-size: 4rem;
-}
-#t2:target ul .icon,
-#t3:target ul .icon,
-#t4:target ul .icon{
-    transform: scale(0.6);
-    transition-delay: 0.25s;
-}
-#t2:target .page1 .icon,
-#t3:target .page1 .icon,
-#t4:target .page1 .icon{
-    filter: blur(2px);
-}
-#t2:target .page2,
-#t3:target .page3,
-#t4:target .page4{
-    left: 10%;
-}
-.page .icon{
-    transform: translateX(360%);
-    transition: all 0.5s ease-out;
-}
-.page1 .icon{
-    height: 420px;
-    transform: translateX(-50%)!important;
-}
-nav section{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size:5rem;
-    color: #fff;
-    text-align: center;
-    /* margin: auto 0; */
-    width: 100%;
-}
-nav section span{
-    font-size:2rem;
-}
-ul li{
-    margin: 25px;
-    transition: all .3s ease-in!important;
-}
-ul li a{
-    color: #fff;
-
-}
-ul li:hover{
-    opacity: 0.5;
-}
-nav.page1{
-    height: 100vh;
+.icon:hover{
+    color: #9b9696;
+    transform: scale(0.9);
     
 }
-.page2{
-    /* width: 90%; */
-    /* backface-visibility: hidden; */
-    background: hidden;
-    position: absolute;
-    background-color: blueviolet;
-}
-.page2,.page3,.page4{
-    position: absolute;
-    left: 200%;
-}
-/* .icon{
 
-} */
-ul.menu{
-    align-self: center;
-    /* height: 50vh; */
-    /* background-color: aqua; */
-    font-size: 1.5rem;
+label span{
+    color: #fff;
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
-.menu{   
-    padding: 15px;
+input{
+    opacity: 0;
+    position: absolute;
 }
-#t4{
+.slide-1{
+    transform: translateY(-150px);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 255);
+
+    color: #fff;
+    text-align: center; 
+    position: sticky
+}
+.slide-1 a{
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+.slide-1 section{
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+.slide-1 p{
+    font-size: 3rem;
+}
+.slide-2{
+    position: absolute;
+    color: #fff;
+    height: 100vh;
+    background-color: rgba(255, 0, 242, 0.837);
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    right: -100%;
+    transition: all 1s ease-in-out;
+}
+#rocket:checked ~ div.container div.slide-2{
+    right: -10%;
+}
+.slide-2 a{
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+.slide-3{
+    position: absolute;
+    color: #fff;
+    height: 100vh;
+    background-color: rgba(248, 2, 2, 0.877);
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    right: -100%;
+    transition:all 1s ease-in-out;
+}
+#home:checked ~ div.container div.slide-3{
+    right: -10%;
+}
+.slide-3 a{
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+.slide-4{
+    position: absolute;
+    color: #fff;
+    height: 100vh;
+    background-color: rgba(40, 176, 10,0.877);
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    right: -100%;
+    transition: all 1s ease-in-out;
+}
+#plus-circle:checked ~ div.container div.slide-4{
+    right: -10%;
+}
+.slide-4 a{
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+#plus-circle:checked + label span,
+#home:checked + label span,
+#rocket:checked + label span{
+transform: scale(0.8);
+color: #9b9696;
+}
+#rocket:checked ~ div.container .slide-1 section{
+    opacity: 0.3;
+}
+#plus-circle:checked ~ div.container .slide-1 section{
+    opacity: 0.3;
+}
+#home:checked ~ div.container .slide-1 section{
+    opacity: 0.3;
 }
