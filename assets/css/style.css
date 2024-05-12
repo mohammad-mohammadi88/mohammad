@@ -21,7 +21,6 @@ body,html{
     height: 100vh;
     position: relative;
     background-color: rgb(30, 30, 255);
-
 }
 label{
     margin: 20px 0px 0 30px;
@@ -29,10 +28,8 @@ label{
 }
 .icon:hover{
     color: #9b9696;
-    transform: scale(0.9);
-    
+    transform: scale(0.9); 
 }
-
 label span{
     color: #fff;
     height:40px;
@@ -49,8 +46,6 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(30, 30, 255);
-
     color: #fff;
     text-align: center; 
     position: sticky
@@ -88,7 +83,6 @@ input{
     font-size: 5rem;
     margin-bottom: 30px;
 }
-
 .slide-3{
     position: absolute;
     color: #fff;
@@ -111,7 +105,6 @@ input{
     font-size: 5rem;
     margin-bottom: 30px;
 }
-
 .slide-4{
     position: absolute;
     color: #fff;
@@ -134,7 +127,6 @@ input{
     font-size: 5rem;
     margin-bottom: 30px;
 }
-
 #plus-circle:checked + label span,
 #home:checked + label span,
 #rocket:checked + label span{
